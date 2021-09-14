@@ -16,9 +16,8 @@
 
     <canvas id="sheet"></canvas><br>
     <div id="center">
-        <button onclick="piirra()" type="button">Piirrä</button>
-        <button>Pyyhi</button>
-        <input oninput="piirravari = this.value" type="color">
+        <button onclick="pyyhitaideteos()">Pyyhi</button>
+        <input id="vari" oninput="piirravari = this.value" type="color">
         <input type="range" min="1" max="100" value="1" oninput="paksuus = this.value">
         <input type="number" oninput="canvas.height = this.value">pituus
         <input type="number" oninput="canvas.width = this.value">leveys

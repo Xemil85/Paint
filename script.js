@@ -12,7 +12,6 @@ context.fillRect(0, 0, canvas.width, canvas.height);
 let piirravari = "black";
 let paksuus = 1;
 let piirretaan = false;
-let pyyhi = false;
 
 // Värin vaihto
 function vaihdavari(element) {
@@ -61,4 +60,11 @@ function lopeta(event) {
         piirretaan = false;
     }
     event.preventDefault();
+}
+
+// Pyyhkii kokonaan canvasista mitä olet piirtänyt.
+function pyyhitaideteos() {
+    context.fillStyle = "white";
+    context.clearRect(0,0, canvas.width, canvas.height);
+    context.fillRect(0,0, canvas.width, canvas.height);
 }
