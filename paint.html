@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/kuvat/babyface_icon.jpg">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>Paint</title>
+</head>
+
+<body>
+    <h1>Paint</h1>
+
+    <canvas id="sheet"></canvas><br>
+    <div id="center">
+        <button onclick="piirra()" type="button">Piirrä</button>
+        <button>Pyyhi</button>
+        <input oninput="piirravari = this.value" type="color">
+        <input type="range" min="1" max="100" value="1" oninput="paksuus = this.value">
+        <input type="number" oninput="canvas.height = this.value">pituus
+        <input type="number" oninput="canvas.width = this.value">leveys
+        <a id="lataa" download="taideteos.jpg"><button type="button" onclick="tallenna()">Tallenna kuvana</button></a>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
