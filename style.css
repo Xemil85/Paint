@@ -21,14 +21,6 @@ canvas {
     margin-right: auto;
 }
 
-.color-field {
-    height: 20px;
-    width: 20px;
-    min-width: 20px;
-    min-height: 20px;
-    display: inline-block;
-}
-
 #center {
     display: flex;
     justify-content: center;
