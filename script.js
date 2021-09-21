@@ -8,11 +8,10 @@ let context = canvas.getContext("2d");
 context.fillStyle = "white";
 context.fillRect(0, 0, canvas.width, canvas.height);
 
-// Muuttujat, jolla pystytään määrittelemään piirtovärin, paksuuden ja niin edelleen.
+// Muuttujat, jolla pystytään määrittelemään piirtovärin, paksuuden, piirto toimivuuden.
 let piirravari = "black";
 let paksuus = 1;
 let piirretaan = false;
-
 let kumoapiirto = [];
 let i = -1;
 
