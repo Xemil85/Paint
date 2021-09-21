@@ -8,5 +8,4 @@ Olen käyttänyt projektissani jquery kirjastoa, jotta piirtäminen onnistuisi.
 Paint application with javascript which can paint beautiful art.
 features for paint are basic draw, clear canvas, undo draw, color change, pencil and canvas size and saving picture for your art.
 
-
 I have been used jquery library that we can paint something.
