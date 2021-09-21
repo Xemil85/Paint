@@ -13,6 +13,9 @@ let piirravari = "black";
 let paksuus = 1;
 let piirretaan = false;
 
+let kumoapiirto = [];
+let i = -1;
+
 // Värin vaihto
 function vaihdavari(element) {
     piirravari = element.style.background;
@@ -26,6 +29,10 @@ function tallenna() {
     latauslinkki.setAttribute("href", kuva);
 }
 
+// EventListenereihin ollaan määritelty hiiren toimivuus piirtämiseen
+// Mousedown, kun painetaan hiiren painiketta, joka aloittaa piirtämisen.
+// Mouseup, kun hiiren painikeesta päästetään irti, joka lopettaa piirtämisen.
+// Mousemove mahdollistaa piirtämisen liikkuvuuden hiirellä.
 canvas.addEventListener("mousedown", aloita, false);
 canvas.addEventListener("mousemove", piirra, false);
 canvas.addEventListener("mouseup", lopeta, false);
@@ -60,6 +67,12 @@ function lopeta(event) {
         piirretaan = false;
     }
     event.preventDefault();
+
+    if (event.type != 'mouseout') {
+        kumoapiirto.push(context.getImageData(0,0, canvas.width, canvas.height));
+        i += 1;
+    }
+    
 }
 
 // Pyyhkii kokonaan canvasista mitä olet piirtänyt.
@@ -67,4 +80,20 @@ function pyyhitaideteos() {
     context.fillStyle = "white";
     context.clearRect(0,0, canvas.width, canvas.height);
     context.fillRect(0,0, canvas.width, canvas.height);
+
+    kumoapiirto = [];
+    i = -1;
+}
+
+// Kumoaa piirtämäsi kohdan.
+// Tarkistaa, että jos piirtämiäsi kohtia ei ole kuin nolla tai vähemmän, niin pyyhkii alustan.
+// Jos piirtämiä kohtia on enemmän, niin se poistaa yhden kerrallaan kumoa painikkeella.
+function kumoa() {
+    if (i <= 0) {
+        pyyhitaideteos();
+    } else {
+        i -= 1;
+        kumoapiirto.pop();
+        context.putImageData(kumoapiirto[i], 0, 0);
+    }
 }
