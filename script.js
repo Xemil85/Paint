@@ -1,7 +1,7 @@
 // Määritetään meidän piirtämisalue
 const canvas = document.getElementById("sheet");
-canvas.width;
-canvas.height;
+canvas.width = 100;
+canvas.height = 100;
 
 // Muuttuja, joka mahdollistaa sen, että voidaan piirtää jotakin alustalle ja alusta on valkoinen.
 let context = canvas.getContext("2d");
