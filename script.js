@@ -1,5 +1,6 @@
 // Määritetään meidän piirtämisalue
 const canvas = document.getElementById("sheet");
+
 canvas.width;
 canvas.height;
 
@@ -24,7 +25,7 @@ function vaihdavari(element) {
 function tallenna() {
     context.fillStyle = "white";
     var latauslinkki = document.getElementById("lataa");
-    var kuva = document.getElementById("sheet").toDataURL("image/jpg").replace("image/jpg", "image/octet-stream");
+    var kuva = document.getElementById("sheet").toDataURL("image/png").replace("image/png", "image/octet-stream");
     latauslinkki.setAttribute("href", kuva);
 }
 
