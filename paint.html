@@ -18,9 +18,15 @@
     <div id="center">
         <button onclick="pyyhitaideteos()">Pyyhi taideteos</button>
         <button onclick="kumoa()">Kumoa</button>
+        <a id="lataa" download="taideteos.jpg"><button type="button" onclick="tallenna()">Tallenna kuvana</button></a>
+    </div>
+    <div style="height: 10px;"></div>
+    <div id="center">
         <input id="vari" oninput="piirravari = this.value" type="color">
         <input type="range" min="1" max="100" value="1" oninput="paksuus = this.value">
-        <a id="lataa" download="taideteos.jpg"><button type="button" onclick="tallenna()">Tallenna kuvana</button></a>
+    </div>
+    <div id="center">
+        <p>Värin vaihto ja kynän koko</p>
     </div>
     <div style="height: 10px;"></div>
     <div id="center">
