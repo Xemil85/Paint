@@ -1,6 +1,7 @@
 // Määritetään meidän piirtämisalue
 const canvas = document.getElementById("sheet");
 
+// Piirtoalustan leveys ja korkeus
 canvas.width = document.getElementById('leveys').offsetWidth;
 canvas.height = document.getElementById('korkeus').offsetWidth;
 
