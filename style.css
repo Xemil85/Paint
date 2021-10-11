@@ -30,3 +30,11 @@ canvas {
     display: flex;
     justify-content: center;
 }
+
+#p1 {
+    margin-left: -15px;
+}
+
+#p2 {
+    margin-right: -5px;
+}
